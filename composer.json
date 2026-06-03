@@ -22,6 +22,7 @@
     ],
     "require": {
         "php": "^8.3",
+        "doctrine/annotations": "^1.11|^2.0",
         "nikic/php-parser": "^5",
         "symfony/console": "^6.4 || ^7.1 || ^8.0",
         "symfony/framework-bundle": "^6.4 || ^7.1 || ^8.0",
@@ -33,7 +34,6 @@
         "psr/log": "^3.0"
     },
     "require-dev": {
-        "doctrine/annotations": "^1.11",
         "doctrine/coding-standard": "^9.0",
         "matthiasnoback/symfony-dependency-injection-test": "^6.0",
         "nyholm/nsa": "^1.0.1",
