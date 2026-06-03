@@ -35,13 +35,8 @@ class FileUtilsTest extends TestCase
     /**
      * @var Filesystem
      */
-    private $fileSystem;
 
-    public function __construct($name = null, array $data = [], $dataName = '')
-    {
-        parent::__construct($name, $data, $dataName);
-        $this->fileSystem = new Filesystem();
-    }
+    private $fileSystem;
 
     public function testAnEmptyDirectoryReturnsNoFiles(): void
     {
@@ -108,6 +103,8 @@ class FileUtilsTest extends TestCase
      */
     protected function setUp(): void
     {
+        $this->fileSystem = new Filesystem();
+
         $tempDir = sys_get_temp_dir();
         if (!is_writable($tempDir)) {
             $this->markTestSkipped(sprintf(
